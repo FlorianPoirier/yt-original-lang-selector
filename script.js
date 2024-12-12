@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         New Userscript
+// @name         yt-original-lang-selector
 // @namespace    http://tampermonkey.net/
 // @version      2024-12-12
 // @description  Youtube video original language auto selector
