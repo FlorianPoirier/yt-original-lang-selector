@@ -44,16 +44,20 @@
         }
     }
 
-    function setOriginalTitleAndDescription() {
+    /* function setOriginalTitleAndDescription() {
         const metaTag = document.querySelector('meta[property="og:title]');
 
         if (metaTag) {
             const originalTitle = metaTag.getAttribute('content');
+            const titleElement = document.querySelector('h1.title');
+            if (titleElement && originalTitle) {
+                titleElement.textContent = originalTitle;
+            }
             console.log(originalTitle);
         } else {
             console.error('Tag meta property og:title not found');
         }
-    }
+    } */
 
     const observer = new MutationObserver(() => {
         setOriginalAudioLanguage();
@@ -64,7 +68,7 @@
     // Assurez-vous que la langue est définie au chargement initial
     window.addEventListener('load', () => {
         setOriginalAudioLanguage();
-        setOriginalTitleAndDescription();
+        //setOriginalTitleAndDescription();
     });
 
 })();
